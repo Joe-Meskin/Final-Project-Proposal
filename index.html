@@ -1,41 +1,231 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang='en-US'>
+
+<!--Author: Joe Meskin-->
 <head>
-    <meta charset="UTF-8">
-    <title>Find Your Career For Life</title>
-    <link rel="stylesheet" href="getting-to-know-me.css">
-    
+    <meta charset='UTF-8'>
+    <title>Health Insurance Risk Calculator JNM</title> <!--Project Name-->
 </head>
-<h1 style='text-align: center';>Find Your Career For Life</h1>
-<h2 style='text-align: center';>Team Members: Brandon Bustos, Delaney McDonnell, and Joe Meskin</h2>
-<h3 style='text-align: center';>Last Updated on Sprint 5 on 11/13/2020</h3>
-<h4>Project Proposal</h4>
-<p>We plan to utilize the information that we are obtaining during Sprint 6 making Matchmaker on
-    a website that will allow you to find the best career path for you between Aviation, Nursing,
-    and Computer Science.</p>
-<h4>Priority Features</h4>
-<ul style="list-style-type:square;">
-    <li>Website accessible through a domain name</li>
-    <li>A comprehensive list of questions to determine a compatible career path</li>
-    <li>Have the Matchmaker program run on the website</li>
-</ul>
-<h4>Secondary Features</h4>
-<ul style="list-style-type:square;">
-    <li>A complex weighting system that allows for multiple desired answers</li>
-    <li>Have a functioning validate function</li>
-    <li>Record the data from users</li>
-    <li>Display the top results on the site</li>
-</ul>
-<h4>Languages and Platforms Utilized</h4>
-<ul style="list-style-type:square;">
-    <li>Python3</li>
-    <li>HTML</li>
-    <li>GoDaddy</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-</ul>
-<h4>Technical Features Being Utilized</h4>
-<p>We did not realize that combining the Matchmaker application and a website was the focus of
-    Sprint 6. However, we stil plan to create this project as we will be learning in class. The
-    additional features are creating a Domain name for our website as well as keeping track of
-    the data from users. We also hope to display a list of the top user results.</p>
+<body style='background-color:orange;'>
+    <h1 style='color:aqua; border:2px solid blue;
+    background-color: blue; text-align:center;'>Health Insurance Risk Calculator</h1>
+
+
+<!--Introduction-->
+<p>Welcome to the Health Insurance Risk Calculator. It will supply you with certain criteria you
+need to gather from a new client and tell you how much of a risk they pose for the company.
+Answer each of the following questions and then click the button at the bottom of the page for
+the results. Answer EACH QUESTION again for EVERY new client. Forgetting to change any answers to
+the information of the new client will result in a miscalculation.</p><hr>
+
+<!--Start of Questions-->
+<label>What is the client's age?</label><br>
+<select id='Age'>
+    <option value='2000'>Age in years...</option>
+    <option value='0'>29 and under</option>
+    <option value='10'>30-44</option>
+    <option value='20'>45-59</option>
+    <option value='30'>60 and older</option>
+</select>
+<br><br>
+<label>What is the client's weight?</label><br>
+<select id='Weight'>
+    <option value='2000'>Weight in pounds...</option>
+    <option value='80'>Less than 80 lbs</option>
+    <option value='85'>80-89 lbs</option>
+    <option value='95'>90-99 lbs</option>
+    <option value='105'>100-109 lbs</option>
+    <option value='115'>110-119 lbs</option>
+    <option value='125'>120-129 lbs</option>
+    <option value='135'>130-139 lbs</option>
+    <option value='145'>140-149 lbs</option>
+    <option value='155'>150-159 lbs</option>
+    <option value='165'>160-169 lbs</option>
+    <option value='175'>170-179 lbs</option>
+    <option value='185'>180-189 lbs</option>
+    <option value='195'>190-199 lbs</option>
+    <option value='205'>200-209 lbs</option>
+    <option value='215'>210-219 lbs</option>
+    <option value='225'>220-229 lbs</option>
+    <option value='235'>230-239 lbs</option>
+    <option value='245'>240-249 lbs</option>
+    <option value='255'>250-259 lbs</option>
+    <option value='265'>260-269 lbs</option>
+    <option value='270'>270 lbs and above</option>
+</select>
+<br><br>
+<label>What is the client's height?</label><br>
+<select id='Height 1'>
+    <option value='2000'>Height in feet...</option>
+    <option value='48'>4 feet</option>
+    <option value='60'>5 feet</option>
+    <option value='72'>6 feet</option>
+    <option value='84'>7 feet</option>
+    <option value='96'>8 feet</option>
+</select>
+<select id='Height 2'>
+    <option value='2000'>And inches...</option>
+    <option value='0'>0 inches</option>
+    <option value='1'>1 inch</option>
+    <option value='2'>2 inches</option>
+    <option value='3'>3 inches</option>
+    <option value='4'>4 inches</option>
+    <option value='5'>5 inches</option>
+    <option value='6'>6 inches</option>
+    <option value='7'>7 inches</option>
+    <option value='8'>8 inches</option>
+    <option value='9'>9 inches</option>
+    <option value='10'>10 inches</option>
+    <option value='11'>11 inches</option>
+    <option value='12'>12 inches</option>
+</select>
+<br><br>
+<label>What is the client's systolic blood pressure?</label><br>
+<select id='Blood'>
+    <option value='2000'>Systolic (upper) and Diastolic (lower)...</option>
+    <option value='0'>Systolic Less than 120 and Diastolic Less than 80 (Normal)</option>
+    <option value='15'>Systolic 120-129 and Diastolic Less than 80 (Elevated)</option>
+    <option value='30'>Systolic 130-139 or Diastolic 80-89 (Hypertension Stage 1)</option>
+    <option value='75'>Systolic 140-179 or Diastolic 90-119 (Hypertension Stage 2)</option>
+    <option value='100'>
+        Systolic Higher than 180 and/or Diastolic Higher than 120 (Hypertensive Crisis)</option>
+</select>
+<br><br>
+<label>Does the client have a family history of diabetes?</label><br>
+<select id='Q1'>
+    <option value='2000'>Select...</option>
+    <option value='10'>Yes</option>
+    <option value='0'>No</option>
+</select>
+<br><br>
+<label>Does the client have a family history of cancer?</label><br>
+<select id='Q2'>
+    <option value='2000'>Select...</option>
+    <option value='10'>Yes</option>
+    <option value='0'>No</option>
+</select>
+<br><br>
+<label>Does the client have a family history of Alzheimer's?</label><br>
+<select id='Q3'>
+    <option value='2000'>Select...</option>
+    <option value='10'>Yes</option>
+    <option value='0'>No</option>
+</select>
+<br><br><br><br>
+
+<!--The button that tells the program to calculate the risk factor of the client-->
+<button type='button' onclick='calculateRiskScore()'>Calculate Risk...</button>
+<h3 id='results'></h3>
+<h3 id='results1'></h3>
+<h3 id='results2'></h3>
+<h3 id='results6'></h3>
+<h4 id='results3'></h4>
+<h4 id='results4'></h4>
+<h4 id='results5'></h4>
+<h2 id='total'></h2>
+<h2 id='risk level'></h2>
+<script>
+function calculateRiskScore() {
+
+    //Pulls the values associated with the responses from the user
+    let ageResponse = document.getElementById('Age').selectedOptions[0].value;
+    let weightResponse = document.getElementById('Weight').selectedOptions[0].value;
+    let h1Response = document.getElementById('Height 1').selectedOptions[0].value;
+    let h2Response = document.getElementById('Height 2').selectedOptions[0].value;
+    let bloodResponse = document.getElementById('Blood').selectedOptions[0].value;
+    let question1Response = document.getElementById('Q1').selectedOptions[0].value;
+    let question2Response = document.getElementById('Q2').selectedOptions[0].value;
+    let question3Response = document.getElementById('Q3').selectedOptions[0].value;
+    //Sets up variables to pull the text from the drop down list selected by the user
+    let ageResult1Response = document.getElementById('Age');
+    let ageResult2Response = ageResult1Response.selectedIndex;
+    let bloodResult1Response = document.getElementById('Blood');
+    let bloodResult2Response = bloodResult1Response.selectedIndex;
+    let q1RResponse = document.getElementById('Q1');
+    let q1R2Response = q1RResponse.selectedIndex;
+    let q2RResponse = document.getElementById('Q2');
+    let q2R2Response = q2RResponse.selectedIndex;
+    let q3RResponse = document.getElementById('Q3');
+    let q3R2Response = q3RResponse.selectedIndex;
+    //Gives an error message if one of the dropdown menus is not changed to a different option
+    if (ageResponse == 2000)
+        {alert("Please select an age range. " +
+        "Then press the 'Caculate Risk' button again for accurate results.")}
+    if (weightResponse == 2000)
+        {alert("Please select a weight range. " +
+        "Then press the 'Caculate Risk' button again for accurate results.")}
+    if (h1Response == 2000)
+        {alert("Please select a height range in feet. " +
+        "Then press the 'Caculate Risk' button again for accurate results.")}
+    if (h2Response == 2000)
+        {alert("Please select a height range in inches. " +
+        "Then press the 'Caculate Risk' button again for accurate results.")}
+    if (bloodResponse == 2000)
+        {alert("Please select a blood pressure range. " +
+        "Then press the 'Caculate Risk' button again for accurate results.")}
+    if (question1Response == 2000)
+        {alert("Please select Yes or No for diabetes. " +
+        "Then press the 'Caculate Risk' button again for accurate results.")}
+    if (question2Response == 2000)
+        {alert("Please select Yes or No for cancer. " +
+        "Then press the 'Caculate Risk' button again for accurate results.")}
+    if (question3Response == 2000)
+        {alert("Please select Yes or No for Alzheimer's. " +
+        "Then press the 'Caculate Risk' button again for accurate results.")}
+    //Calculates the bmi based on weight and height and rounds it to 1 decimal place
+    let bmi = parseInt(weightResponse) /((parseInt(h1Response) + parseInt(h2Response))**2) * 703;
+    let bmiRound = bmi.toFixed(1);
+    //Calculates the risk score for the bmi
+    let bmiValue = 0;
+    if (bmi < 25)
+        {bmiValue = 0}
+    else if (24.9 < bmi < 30)
+        {bmiValue = 30}
+    else if (bmi > 29.9)
+        {bmiValue = 75}
+    // Creates risk total labels for final results
+    let bmiMessage = ('');
+    if (bmi < 25)
+        {bmiMessage += (' (Normal)')}
+    else if (24.9 < bmi < 30)
+        {bmiMessage += (' (Overweight)')}
+    else if (bmi > 29.9)
+        {bmiMessage += (' (Obesity)')}
+    //Calculates total risk
+    let riskTotal = (parseInt(ageResponse) + parseInt(bmiValue) + parseInt(bloodResponse)
+    + parseInt(question1Response) + parseInt(question2Response) + parseInt(question3Response));
+   //This is the risk level classifications. This determines which risk level message is displayed.
+    let userResponse = ('');
+    if (riskTotal > 74){
+        userResponse += ('This client is UNINSURABLE!!')}
+    else if (21 > riskTotal){
+        userResponse += ('Fantastic!! This client is low risk!!')}
+    else if (51 > riskTotal){
+        userResponse += ('This client is medium risk.')}
+    else if (76 > riskTotal){
+        userResponse += ('This client is high risk!')}
+    document.getElementById('total').innerHTML = 'Risk Score: ' + riskTotal;
+    //Creates summary of info right before results
+    document.getElementById('results').innerHTML =
+    'Age: ' + ageResult1Response.options[ageResult2Response].text;
+
+    document.getElementById('results1').innerHTML = 'BMI: ' + bmiRound + bmiMessage;
+
+    document.getElementById('results2').innerHTML =
+    'Blood Pressure: ' + bloodResult1Response.options[bloodResult2Response].text;
+
+    document.getElementById('results3').innerHTML =
+    'Diabetes? ' + q1RResponse.options[q1R2Response].text;
+
+    document.getElementById('results4').innerHTML =
+    'Cancer? ' + q2RResponse.options[q2R2Response].text;
+
+    document.getElementById('results5').innerHTML =
+    "Alzheimer's? " + q3RResponse.options[q3R2Response].text;
+
+    document.getElementById('results6').innerHTML = 'Family History Presence:';
+
+    document.getElementById('risk level').innerHTML = userResponse;
+    }</script>
+</body>
+</html>
